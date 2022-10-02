@@ -19,7 +19,11 @@
         x
       </button>
     </div>
-    <ul role="list" class="block absolute w-full mt-0.5 pb-12">
+    <ul
+      v-if="input.length > 0 && searchList.length > 0"
+      role="list"
+      class="block absolute w-full mt-0.5 pb-12"
+    >
       <Entry
         v-for="post in searchList"
         :key="post.id"
